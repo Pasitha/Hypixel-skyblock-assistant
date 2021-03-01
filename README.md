@@ -7,4 +7,9 @@ the console app to help you to do the thing with bazaar easier(i guess)
 
 ###### Feature
 > buyInstanlyPrice
-function to return a
+
+function to return a buyPrice (quick status of product)
+
+> sellInstanlyPrice
+
+function to return a sellPrice (quick status of product)
