@@ -14,7 +14,7 @@ public:
 		struct bazaar {
 
 			// Get the buy instanly price 
-			const double const buyInstanlyPrice(struct hypixel* h, const char* product_id, float amount = 1.0f) const {
+			const double const buyInstanlyPrice(struct hypixel* h, const char* product_id, int amount = 1) const {
 				nlohmann::json response = nlohmann::json::parse(cpr::Get(cpr::Url{ "https://api.hypixel.net/skyblock/bazaar/product" },
 					cpr::Parameters{ {"key", h->APIkey}, {"productId", product_id} }).text);
 
@@ -22,7 +22,7 @@ public:
 			}
 
 			// Get the sell instanly price
-			const double const sellInstanlyPrice(struct hypixel* h, const char* product_id, float amount = 1.0f) const {
+			const double const sellInstanlyPrice(struct hypixel* h, const char* product_id, int amount = 1) const {
 				nlohmann::json response = nlohmann::json::parse(cpr::Get(cpr::Url{ "https://api.hypixel.net/skyblock/bazaar/product" },
 					cpr::Parameters{ {"key", h->APIkey}, {"productId", product_id} }).text);
 
